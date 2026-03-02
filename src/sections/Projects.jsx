@@ -21,8 +21,7 @@ export default function Projects() {
       desc: "E‑Pic is a community-driven digital platform for mobile photographers, visual artists, and storytellers to showcase and share their creative work. It integrates photo sharing with a puzzle feature that transforms images into interactive formats.",
       tags: ["Flutter", "Dart"],
       link: "https://play.google.com/store/apps/details?id=com.xentro.epic",
-      image:
-        "https://play-lh.googleusercontent.com/bTY0EiNzlrOtC2e6f5WEEwsbFFWbNSUVMsVT2KetooFueStzgmraiApemNqB79Mj5ksD=w240-h480-rw?w=800",
+      image: "https://e-pic.co/assets/E-pic_logo-CDOa_l7e.png?w=800",
     },
     {
       title: "ProBash Sheba",
@@ -31,7 +30,7 @@ export default function Projects() {
       tags: ["Flutter", "Dart"],
       link: "https://play.google.com/store/apps/details?id=com.xentroinfotech.probashsheba",
       image:
-        "https://play-lh.googleusercontent.com/Q0GTV5o7N26tpGDTjqdt20juLrFxSgB-lKf6GLvOh7eehlsTvqKRyivWwzlASNL1hSKy6nNCBRP5tGlr1QZf=w240-h480-rw?w=800",
+        "https://psglobaltech.org/assets/android-chrome-192x192-BqmtQxpV.png?w=800",
     },
     {
       title: "HyipLab",
@@ -40,7 +39,7 @@ export default function Projects() {
       tags: ["Flutter", "Dart"],
       link: "https://play.google.com/store/apps/details?id=dev.vlab.hyip_lab",
       image:
-        "https://play-lh.googleusercontent.com/ZyqAQRgrsdgU_bz47lvK2Fvifuj3lu3Kx9jTn-s9ygcOJMNbU7lX-WxGE4zScOT9zkI=w240-h480-rw?w=800",
+        "https://viserlab.com/assets/images/products/42670347_cover.jpg?w=800",
     },
     {
       title: "intl_mobile_field",
