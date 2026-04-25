@@ -26,7 +26,7 @@ export default function TechStack() {
     {
       name: "Blender",
       url: "https://www.blender.org/",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/2503px-Blender_logo_no_text.svg.png",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/3840px-Blender_logo_no_text.svg.png",
     },
     {
       name: "Cinema 4D",
@@ -63,7 +63,7 @@ export default function TechStack() {
     {
       name: "XAMPP",
       url: "https://www.apachefriends.org/",
-      img: "https://upload.wikimedia.org/wikipedia/en/thumb/7/78/XAMPP_logo.svg/1200px-XAMPP_logo.svg.png",
+      img: "https://upload.wikimedia.org/wikipedia/commons/d/dc/XAMPP_Logo.png",
     },
 
     // Languages & Frameworks
@@ -90,7 +90,7 @@ export default function TechStack() {
     {
       name: "Python",
       url: "https://www.python.org/",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png",
+      img: "https://images.icon-icons.com/2699/PNG/512/python_logo_icon_168886.png",
     },
     {
       name: "JavaScript",
@@ -105,7 +105,7 @@ export default function TechStack() {
     {
       name: "CSS3",
       url: "https://www.w3schools.com/css/",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png",
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1920px-CSS3_logo_and_wordmark.svg.png",
     },
     {
       name: "Bootstrap",
