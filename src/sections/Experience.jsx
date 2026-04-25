@@ -56,7 +56,7 @@ export default function Experience() {
     },
     {
       company: "WEBMART IT",
-      role: "WordPress Developer (Full-time | Onsite)",
+      role: "WordPress Developer Intern (Part-time | Onsite)",
       duration: "JAN 2019 - JUN 2019",
       location: "Chattogram, Bangladesh",
       description: [
