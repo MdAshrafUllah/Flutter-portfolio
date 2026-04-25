@@ -24,13 +24,13 @@ export default function Projects() {
       image: "https://e-pic.co/assets/E-pic_logo-CDOa_l7e.png?w=800",
     },
     {
-      title: "ProBash Sheba",
+      title: "PS Global",
       category: "Live Apps",
-      desc: "Probash Sheba provides verified information and tools for Bangladeshi and South Asian workers, students, and visitors living in Malaysia. The app is designed to help users access essential services, manage daily life, and stay informed about work, study, and legal matters.",
+      desc: "PS Global is a Malaysia-first all-in-one app for the Probash community—students, expatriates, and travelers. Search study options, request visa services, book hotels, browse tour packages, find jobs, and access practical daily-life tools, deals, and support in one place.",
       tags: ["Flutter", "Dart"],
       link: "https://play.google.com/store/apps/details?id=com.xentroinfotech.probashsheba",
       image:
-        "https://psglobaltech.org/assets/android-chrome-192x192-BqmtQxpV.png?w=800",
+        "https://raw.githubusercontent.com/MdAshrafUllah/Flutter-portfolio/refs/heads/main/ps%20global.jpg",
     },
     {
       title: "HyipLab",
