@@ -1,42 +1,49 @@
 import { Globe, Package, Rocket, Smartphone } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import Section from "../components/Section";
 
 export default function About() {
+  const { t } = useTranslation();
+
   const stats = [
-    { icon: <Smartphone />, label: "Mobile Apps", value: "Production-Ready" },
-    { icon: <Package />, label: "pub.dev", value: "Package Author" },
-    { icon: <Rocket />, label: "Deployment", value: "Play Store Expert" },
-    { icon: <Globe />, label: "Open Source", value: "Contributor" },
+    {
+      icon: <Smartphone />,
+      label: t("about.stats.mobile.label"),
+      value: t("about.stats.mobile.value"),
+    },
+    {
+      icon: <Package />,
+      label: t("about.stats.pub.label"),
+      value: t("about.stats.pub.value"),
+    },
+    {
+      icon: <Rocket />,
+      label: t("about.stats.deployment.label"),
+      value: t("about.stats.deployment.value"),
+    },
+    {
+      icon: <Globe />,
+      label: t("about.stats.opensource.label"),
+      value: t("about.stats.opensource.value"),
+    },
   ];
 
   return (
-    <Section
-      id="about"
-      title="The Flutter Craftsman"
-      subtitle="Turning complex ideas into high-performance cross-platform realities.">
+    <Section id="about" title={t("about.title")} subtitle={t("about.subtitle")}>
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         <div className="space-y-6">
           <p className="text-xl font-medium leading-relaxed text-slate-700 dark:text-slate-300">
-            I specialize in architecting{" "}
-            <span className="font-bold text-primary">Android & iOS</span>{" "}
-            applications that are not just functional, but performant and
-            scalable.
+            {t("about.intro")}
           </p>
           <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-            With a deep understanding of the Flutter ecosystem, I've led
-            complete development cycles-from pixel-perfect UI implementation to
-            complex REST API integrations and monetization setups with Google
-            AdMob.
+            {t("about.body1")}
           </p>
           <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-            I am a firm believer in{" "}
+            {t("about.body2.start")}{" "}
             <span className="font-bold text-slate-900 dark:text-white">
-              Clean Architecture
+              {t("about.body2.bold")}
             </span>{" "}
-            and reactive programming. Beyond client work, I actively contribute
-            to the Flutter community through open-source projects and by
-            publishing specialized packages on{" "}
-            <span className="font-bold text-primary underline">pub.dev</span>.
+            {t("about.body2.end")}
           </p>
 
           <div className="grid grid-cols-2 gap-6 pt-6">
@@ -63,25 +70,25 @@ export default function About() {
           <div className="relative glass-card p-8 rounded-[40px] border border-white/20 shadow-2xl overflow-hidden bg-white/40 dark:bg-slate-900/40">
             <h3 className="text-xl font-black mb-6 flex items-center gap-2">
               <span className="h-2 w-2 bg-green-500 rounded-full animate-ping"></span>
-              Current Tech Philosophy
+              {t("about.philosophy.title")}
             </h3>
             <ul className="space-y-4">
               {[
                 {
-                  t: "Clean Architecture",
-                  d: "Separation of concerns for testable code.",
+                  t: t("about.philosophy.items.0.t"),
+                  d: t("about.philosophy.items.0.d"),
                 },
                 {
-                  t: "Modular Design",
-                  d: "Highly reusable widget & logic components.",
+                  t: t("about.philosophy.items.1.t"),
+                  d: t("about.philosophy.items.1.d"),
                 },
                 {
-                  t: "Performance First",
-                  d: "Optimized 60fps animations and memory safety.",
+                  t: t("about.philosophy.items.2.t"),
+                  d: t("about.philosophy.items.2.d"),
                 },
                 {
-                  t: "Monetization",
-                  d: "Seamless AdMob & In-app purchase integration.",
+                  t: t("about.philosophy.items.3.t"),
+                  d: t("about.philosophy.items.3.d"),
                 },
               ].map((item, idx) => (
                 <li key={idx} className="flex gap-4">

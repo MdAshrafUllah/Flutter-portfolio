@@ -1,110 +1,76 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Code, Github, Layout, Package, Smartphone } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import bmiCalculatorImg from "../assets/projects/bmi_calculator.png";
+import circleNavBarImg from "../assets/projects/circle_nav_bar.gif";
+import ePicImg from "../assets/projects/e-pic.png";
+import hyipLabImg from "../assets/projects/hyiplab.png";
+import intlMobileFieldImg from "../assets/projects/intl_mobile_field.png";
+import myCoufierImg from "../assets/projects/my_coufier.png";
+import psGlobalImg from "../assets/projects/ps-global.jpg";
+import squareFurnitureImg from "../assets/projects/square_furniture.jpg";
+import ticTacToeImg from "../assets/projects/tic_tac_toe.png";
+import weatherAppImg from "../assets/projects/weather_app.jpg";
 import Section from "../components/Section";
 
 export default function Projects() {
+  const { t } = useTranslation();
   const [filter, setFilter] = useState("All");
 
   const categories = [
-    { name: "All", icon: <Code size={16} /> },
-    { name: "Live Apps", icon: <Smartphone size={16} /> },
-    { name: "Live Package", icon: <Package size={16} /> },
-    { name: "UI/UX", icon: <Layout size={16} /> },
-    { name: "Practices", icon: <Github size={16} /> },
-  ];
-
-  const projects = [
     {
-      title: "E-Pic",
-      category: "Live Apps",
-      desc: "E‑Pic is a community-driven digital platform for mobile photographers, visual artists, and storytellers to showcase and share their creative work. It integrates photo sharing with a puzzle feature that transforms images into interactive formats.",
-      tags: ["Flutter", "Dart"],
-      link: "https://play.google.com/store/apps/details?id=com.xentro.epic",
-      image: "https://e-pic.co/assets/E-pic_logo-CDOa_l7e.png?w=800",
+      name: "All",
+      icon: <Code size={16} />,
+      label: t("projects.categories.all"),
     },
     {
-      title: "PS Global",
-      category: "Live Apps",
-      desc: "PS Global is a Malaysia-first all-in-one app for the Probash community—students, expatriates, and travelers. Search study options, request visa services, book hotels, browse tour packages, find jobs, and access practical daily-life tools, deals, and support in one place.",
-      tags: ["Flutter", "Dart"],
-      link: "https://play.google.com/store/apps/details?id=com.xentroinfotech.probashsheba",
-      image:
-        "https://raw.githubusercontent.com/MdAshrafUllah/Flutter-portfolio/refs/heads/main/ps%20global.jpg",
+      name: "Live Apps",
+      icon: <Smartphone size={16} />,
+      label: t("projects.categories.live_apps"),
     },
     {
-      title: "HyipLab",
-      category: "Live Apps",
-      desc: "Easily manage finances with our safe and intuitive banking app. Access accounts, transfer funds, and pay bills seamlessly. Enjoy peace of mind with robust security features. Simplify your banking experience today!",
-      tags: ["Flutter", "Dart"],
-      link: "https://play.google.com/store/apps/details?id=dev.vlab.hyip_lab",
-      image:
-        "https://viserlab.com/assets/images/products/42670347_cover.jpg?w=800",
+      name: "Live Package",
+      icon: <Package size={16} />,
+      label: t("projects.categories.live_package"),
     },
     {
-      title: "intl_mobile_field",
-      category: "Live Package",
-      desc: "A customized Flutter TextFormField to input an international Mobile number along with the country code. It provides a user-friendly interface for selecting country codes and formatting phone numbers correctly.",
-      tags: ["Dart", "Pub.dev"],
-      link: "https://pub.dev/packages/intl_mobile_field",
-      image:
-        "https://github.com/MdAshrafUllah/intl_mobile_field/blob/master/output/intl_mobile_field.png?raw=true?w=800",
+      name: "UI/UX",
+      icon: <Layout size={16} />,
+      label: t("projects.categories.ui"),
     },
     {
-      title: "circle_nav_bar",
-      category: "Live Package",
-      desc: "A customizable circular navigation bar for Flutter apps. It provides a visually appealing and intuitive navigation experience with smooth animations.",
-      tags: ["Dart", "Pub.dev"],
-      link: "https://pub.dev/packages/circle_nav_bar",
-      image:
-        "https://raw.githubusercontent.com/111coding/circle_nav_bar/master/doc/animation.gif?w=800",
-    },
-    {
-      title: "BMI Calculator App UI",
-      category: "UI/UX",
-      desc: "A sleek and modern BMI Calculator app UI design created in Figma. The design features a clean layout with intuitive navigation, vibrant colors, and interactive elements to enhance user experience while calculating Body Mass Index.",
-      tags: ["Figma", "UI/UX"],
-      link: "https://www.figma.com/community/file/1376314139273257837/bmi-calculator-app-ui",
-      image:
-        "https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/223bf2b3e7d2690a6ff558041cef74ae6d342648?w=800",
-    },
-    {
-      title: "Weather App",
-      category: "Practices",
-      desc: "A sleek and modern Weather App built with Flutter, providing real-time weather updates and forecasts. The app features a clean and intuitive UI, allowing users to easily check current weather conditions, hourly forecasts, and 7-day predictions for their location or any city worldwide.",
-      tags: ["Flutter", "Dart"],
-      link: "https://github.com/MdAshrafUllah/weather_app",
-      image:
-        "https://github.com/MdAshrafUllah/weather_app/raw/main/output/cover.jpg?w=800",
-    },
-    {
-      title: "Tic Tac Toe Game",
-      category: "Practices",
-      desc: "A sleek and modern Tic Tac Toe Game App built with Flutter. The app features a clean and intuitive UI, allowing users to play against an AI opponent or with a friend.",
-      tags: ["Flutter", "Dart"],
-      link: "https://github.com/MdAshrafUllah/tic-tac-toe-game-app",
-      image:
-        "https://github.com/MdAshrafUllah/tic-tac-toe-game-app/raw/main/output/two_people_playing.png?w=800",
-    },
-    {
-      title: "Square Furniture Landing",
-      category: "Practices",
-      desc: "A modern and responsive landing page for a furniture store, designed to showcase products and attract customers. The design features a clean layout, high-quality images, and intuitive navigation to enhance user experience and drive sales.",
-      tags: ["React", "Tailwind CSS", "JavaScript"],
-      link: "https://mdashrafullah.github.io/Square-Furniture-Landing/",
-      image:
-        "https://i.ytimg.com/vi/WyWmcIjf-q8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBknSOefSC_w3ZV3OLiLQQOEh_crg?w=800",
+      name: "Practices",
+      icon: <Github size={16} />,
+      label: t("projects.categories.practices"),
     },
   ];
 
+  const projects = t("projects.list", { returnObjects: true }).map(
+    (p, index) => ({
+      ...p,
+      image: [
+        ePicImg,
+        psGlobalImg,
+        hyipLabImg,
+        intlMobileFieldImg,
+        circleNavBarImg,
+        bmiCalculatorImg,
+        weatherAppImg,
+        ticTacToeImg,
+        squareFurnitureImg,
+        myCoufierImg,
+      ][index],
+    }),
+  );
   const filteredProjects =
     filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
     <Section
       id="projects"
-      title="Featured Lab"
-      subtitle="A curated collection of my production apps, packages, and experiments.">
+      title={t("projects.title")}
+      subtitle={t("projects.subtitle")}>
       <div className="flex flex-wrap justify-center gap-3 mb-16">
         {categories.map((cat) => (
           <button
@@ -115,7 +81,7 @@ export default function Projects() {
                 ? "bg-primary text-white shadow-lg shadow-primary/30"
                 : "glass-card border border-slate-200 dark:border-slate-800 text-slate-500"
             }`}>
-            {cat.icon} {cat.name}
+            {cat.icon} {cat.label}
           </button>
         ))}
       </div>

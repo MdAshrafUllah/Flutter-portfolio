@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import Section from "../components/Section";
 
 export default function TechStack() {
+  const { t } = useTranslation();
   const techData = [
     // Creative & Design
     {
@@ -22,16 +24,6 @@ export default function TechStack() {
       name: "After Effects",
       url: "https://www.adobe.com/products/aftereffects.html",
       img: "https://www.adobe.com/content/dam/cc/us/en/products/ccoverview/ae_cc_app_RGB.svg",
-    },
-    {
-      name: "Blender",
-      url: "https://www.blender.org/",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/3840px-Blender_logo_no_text.svg.png",
-    },
-    {
-      name: "Cinema 4D",
-      url: "https://www.maxon.net/en/cinema-4d",
-      img: "https://upload.wikimedia.org/wikipedia/en/d/d8/C4D_Logo.png",
     },
     {
       name: "Figma",
@@ -140,7 +132,7 @@ export default function TechStack() {
     {
       name: "Firebase",
       url: "https://firebase.google.com/",
-      img: "https://www.gstatic.com/devrel-devsite/prod/v8d1d0686aef3ca9671e026a6ce14af5c61b805aabef7c385b0e34494acbfc654/firebase/images/touchicon-180.png",
+      img: "https://static.vecteezy.com/system/resources/previews/072/678/006/non_2x/firebase-logo-icon-free-png.png",
     },
     {
       name: "MongoDB",
@@ -155,10 +147,7 @@ export default function TechStack() {
   ];
 
   return (
-    <Section
-      id="tech"
-      title="Tech & Software Arsenal"
-      subtitle="A comprehensive collection of tools and technologies I use to bring ideas to life.">
+    <Section id="tech" title={t("tech.title")} subtitle={t("tech.subtitle")}>
       <div className="flex flex-wrap justify-center gap-6 mt-12 px-4">
         {techData.map((tech, index) => (
           <a

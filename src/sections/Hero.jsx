@@ -6,8 +6,10 @@ import {
   TwitterIcon,
 } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
@@ -53,11 +55,11 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-            Available for worldwide projects
+            {t("hero.available")}
           </div>
 
           <h1 className="text-5xl md:text-7xl font-black leading-[1.1] mb-6 min-h-[160px] md:min-h-[auto]">
-            Building Reliable & Scalable <br />
+            {t("hero.building")} <br />
             <span className="text-primary inline-block min-w-[300px]">
               {text}
               <span className="animate-pulse border-r-4 border-primary ml-1"></span>
@@ -65,24 +67,23 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 mb-10 leading-relaxed max-w-xl">
-            Hi, I'm{" "}
+            {t("hero.hi")}{" "}
             <span className="font-bold text-slate-900 dark:text-white">
               Md Ashraf Ullah
             </span>
-            . A Flutter Developer focused on high-performance architecture and
-            cross-platform solutions.
+            . {t("hero.description")}
           </p>
 
           <div className="flex flex-wrap gap-4 mb-10">
             <a
               href="#projects"
               className="px-8 py-4 bg-primary text-white rounded-2xl font-bold flex items-center gap-2 hover:bg-blue-600 transition-all shadow-xl shadow-primary/20">
-              Explore Projects <ArrowRight size={20} />
+              {t("hero.explore")} <ArrowRight size={20} />
             </a>
             <a
               href="/Md Ashraf Ullah.pdf"
               className="px-8 py-4 glass-card rounded-2xl font-bold flex items-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all border border-slate-200 dark:border-slate-800">
-              Download CV <Download size={18} />
+              {t("hero.cv")} <Download size={18} />
             </a>
           </div>
 
@@ -132,7 +133,7 @@ export default function Hero() {
               </div>
               <div>
                 <p className="text-[10px] font-bold text-slate-400 uppercase">
-                  Expert in
+                  {t("hero.expert")}
                 </p>
                 <p className="text-sm font-black">Flutter & Dart</p>
               </div>

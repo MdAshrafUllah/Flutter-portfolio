@@ -1,76 +1,53 @@
 import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import Section from "../components/Section";
 
 export default function Experience() {
+  const { t } = useTranslation();
+
   const experiences = [
     {
       company: "SOFOF TECH",
-      role: "Flutter Developer (Full-time | Remote)",
-      duration: "MAR 2026 - PRESENT",
-      location: "Jeddah, Makkah, Saudi Arabia",
-      description: [
-        "Designed complete UI from scratch following modern UI/UX practices.",
-        "Developed and maintained high-performance Flutter mobile application features following Clean Architecture principles.",
-        "Designed and implemented responsive, user-friendly UI components aligned with modern design standards.",
-        "Integrated RESTful APIs and managed data efficiently using optimized state management techniques.",
-        "Collaborated with remote teams to ensure timely delivery and maintain high code quality.",
-        "Debugged and optimized applications to improve performance, stability, and overall user experience.",
-        "Developed full Flutter applications for Android and iOS platforms.",
-      ],
+      role: t("experience.list.0.role"),
+      duration: t("experience.list.0.duration"),
+      location: t("experience.list.0.location"),
+      description: t("experience.list.0.description", { returnObjects: true }),
     },
     {
       company: "XENTRO",
-      role: "Flutter Developer (Full-time | Onsite)",
-      duration: "SEP 2024 - FEB 2026",
-      location: "Chattogram, Bangladesh",
-      description: [
-        "Designed complete UI from scratch following modern UI/UX practices.",
-        "Developed full Flutter applications for Android and iOS platforms.",
-        "Integrated Firebase services including Push Notifications, Crashlytics, AdMob and Database.",
-        "Worked with REST APIs and third-party integrations.",
-        "Debugged, optimized, and improved performance and stability.",
-        "Managed Store deployment process including release builds, application signing, and updates.",
-        "Deployed applications to Google Play Store, ensuring compliance with store guidelines and successful release management.",
-      ],
+      role: t("experience.list.1.role"),
+      duration: t("experience.list.1.duration"),
+      location: t("experience.list.1.location"),
+      description: t("experience.list.1.description", { returnObjects: true }),
     },
     {
       company: "AMRALAB",
-      role: "Flutter Developer (Remote | Project-Based)",
-      duration: "DEC 2023 - FEB 2024",
-      location: "Dhaka, Bangladesh",
-      description: [
-        "Developed Flutter-based mobile features and UI components.",
-        "Integrated REST APIs and handled complex data management.",
-        "Collaborated with remote teams to maintain high code quality.",
-      ],
+      role: t("experience.list.2.role"),
+      duration: t("experience.list.2.duration"),
+      location: t("experience.list.2.location"),
+      description: t("experience.list.2.description", { returnObjects: true }),
     },
     {
       company: "FREELANCER",
-      role: "Flutter Developer (Remote | Project-Based)",
-      duration: "JAN 2022 - PRESENT",
-      location: "Remote",
-      description: [
-        "Developed multiple mobile applications for various industries.",
-        "Handled full lifecycle development from client communication to delivery.",
-      ],
+      role: t("experience.list.3.role"),
+      duration: t("experience.list.3.duration"),
+      location: t("experience.list.3.location"),
+      description: t("experience.list.3.description", { returnObjects: true }),
     },
     {
       company: "WEBMART IT",
-      role: "WordPress Developer Intern (Part-time | Onsite)",
-      duration: "JAN 2019 - JUN 2019",
-      location: "Chattogram, Bangladesh",
-      description: [
-        "Worked on website development and customization projects.",
-        "Built responsive and client-focused web solutions.",
-      ],
+      role: t("experience.list.4.role"),
+      duration: t("experience.list.4.duration"),
+      location: t("experience.list.4.location"),
+      description: t("experience.list.4.description", { returnObjects: true }),
     },
   ];
 
   return (
     <Section
       id="experience"
-      title="Work Experience"
-      subtitle="My professional journey and the companies I've contributed to.">
+      title={t("experience.title")}
+      subtitle={t("experience.subtitle")}>
       <div className="max-w-4xl mx-auto mt-12 space-y-8">
         {experiences.map((exp, index) => (
           <div

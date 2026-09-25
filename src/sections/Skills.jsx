@@ -1,14 +1,16 @@
 import { Cpu, Globe, Hexagon, Rocket } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import Section from "../components/Section";
 
 export default function Skills() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState(0);
 
   const skillData = [
     {
       id: 0,
-      category: "Architecture & Logic",
+      category: t("skills.data.0.category"),
       icon: <Cpu size={24} />,
       techs: [
         "Flutter",
@@ -19,12 +21,11 @@ export default function Skills() {
         "MVVM",
         "MVC",
       ],
-      details:
-        "Focusing on modular, testable, and scalable codebases using TDD and Industry design patterns.",
+      details: t("skills.data.0.details"),
     },
     {
       id: 1,
-      category: "State & Data",
+      category: t("skills.data.1.category"),
       icon: <Hexagon size={24} />,
       techs: [
         "Bloc",
@@ -35,12 +36,11 @@ export default function Skills() {
         "SharedPreferences",
         "SQLite",
       ],
-      details:
-        "Expertise in reactive programming and managing complex application states and offline data synchronization.",
+      details: t("skills.data.1.details"),
     },
     {
       id: 2,
-      category: "Cloud & APIs",
+      category: t("skills.data.2.category"),
       icon: <Globe size={24} />,
       techs: [
         "RESTful API",
@@ -51,12 +51,11 @@ export default function Skills() {
         "WebSockets",
         "OAuth",
       ],
-      details:
-        "Integrating robust backends and third-party services with secure and optimized networking layers.",
+      details: t("skills.data.2.details"),
     },
     {
       id: 3,
-      category: "Quality",
+      category: t("skills.data.3.category"),
       icon: <Rocket size={24} />,
       techs: [
         "Git/GitHub",
@@ -66,16 +65,15 @@ export default function Skills() {
         "Jira",
         "Code Review",
       ],
-      details:
-        "Ensuring high-quality delivery through automated testing, performance profiling, and continuous integration.",
+      details: t("skills.data.3.details"),
     },
   ];
 
   return (
     <Section
       id="skills"
-      title="Pro Technical Arsenal"
-      subtitle="A deep dive into my professional toolkit and engineering standards.">
+      title={t("skills.title")}
+      subtitle={t("skills.subtitle")}>
       <div className="mt-12 bg-white dark:bg-slate-900 rounded-[40px] p-6 md:p-10 shadow-2xl border border-slate-100 dark:border-slate-800">
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-5 space-y-4">

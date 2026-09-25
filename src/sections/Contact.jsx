@@ -1,8 +1,10 @@
 import { Github, Linkedin, Mail, MapPin, Send, Twitter } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import Section from "../components/Section";
 
 export default function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     subject: "",
     message: "",
@@ -30,14 +32,14 @@ export default function Contact() {
   return (
     <Section
       id="contact"
-      title="Get In Touch"
-      subtitle="Let's discuss your next big project or just say hi!">
+      title={t("contact.title")}
+      subtitle={t("contact.subtitle")}>
       <div className="grid lg:grid-cols-12 gap-12 mt-8">
         {/* Contact Info Card */}
         <div className="lg:col-span-5 space-y-8">
           <div className="glass-card p-8 rounded-[40px] border border-slate-100 dark:border-slate-800">
             <h3 className="text-2xl font-black mb-6 uppercase tracking-tight">
-              Connect With Me
+              {t("contact.connect")}
             </h3>
             <div className="space-y-6">
               <div className="flex items-center gap-4">
@@ -46,7 +48,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">
-                    Email
+                    {t("contact.email")}
                   </p>
                   <p className="font-bold text-slate-900 dark:text-white">
                     mdashrafullah47@gmail.com
@@ -59,7 +61,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">
-                    Location
+                    {t("contact.location")}
                   </p>
                   <p className="font-bold text-slate-900 dark:text-white">
                     Chattogram, Bangladesh
@@ -98,35 +100,35 @@ export default function Contact() {
             className="glass-card p-8 md:p-10 rounded-[40px] border border-slate-100 dark:border-slate-800 space-y-6">
             <div className="space-y-2">
               <label className="text-sm font-bold ml-1 text-slate-600 dark:text-slate-400">
-                Subject
+                {t("contact.form.subject")}
               </label>
               <input
                 name="subject"
                 required
                 onChange={handleChange}
                 type="text"
-                placeholder="How can I help you?"
+                placeholder={t("contact.form.subject_placeholder")}
                 className="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 focus:border-primary outline-none transition-all"
               />
             </div>
 
             <div className="space-y-2">
               <label className="text-sm font-bold ml-1 text-slate-600 dark:text-slate-400">
-                Message
+                {t("contact.form.message")}
               </label>
               <textarea
                 name="message"
                 required
                 onChange={handleChange}
                 rows="6"
-                placeholder="Type your message here..."
+                placeholder={t("contact.form.message_placeholder")}
                 className="w-full px-6 py-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 focus:border-primary outline-none transition-all resize-none"></textarea>
             </div>
 
             <button
               type="submit"
               className="w-full py-5 bg-primary text-white rounded-2xl font-black flex items-center justify-center gap-3 hover:bg-blue-600 shadow-xl shadow-primary/20 transition-all active:scale-95">
-              Send via Gmail <Send size={20} />
+              {t("contact.form.button")} <Send size={20} />
             </button>
           </form>
         </div>
